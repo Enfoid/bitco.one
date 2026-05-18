@@ -81,7 +81,7 @@
     }
 
     .symbol {
-        margin-top: 2vh;
+        margin-top: 5vh;
         font-size: 2vw;
         font-weight: 700;
         letter-spacing: 0.2em;
