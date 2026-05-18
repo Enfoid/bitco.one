@@ -1,6 +1,15 @@
 RewriteEngine On
-# If the requested filename is NOT an existing file
+
+# Redirect HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Original catch-all redirect (commented out)
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ https://cdn.nullx8.com/nullx8.html [R=301]
+
+# Rewrite non-file/non-dir requests to index.php
 RewriteCond %{REQUEST_FILENAME} !-f
-# AND if the requested filename is NOT an existing directory
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ https://cdn.nullx8.com/nullx8.html [R=301]
+RewriteRule ^(.*)$ index.php [L]

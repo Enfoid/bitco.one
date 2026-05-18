@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BTC Price Wall</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-
 <style>
     * {
         margin: 0;
@@ -21,7 +18,7 @@
         overflow: hidden;
         background: #000;
         color: #fff;
-        font-family: 'Inter', sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
 
     body {
@@ -97,9 +94,7 @@
 
     async function fetchBTC() {
         try {
-            const response = await fetch(
-                'https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT'
-            );
+            const response = await fetch('btc-price.php');
 
             const data = await response.json();
 
