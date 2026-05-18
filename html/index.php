@@ -88,6 +88,41 @@
         opacity: 0.7;
     }
 
+    .change {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4em;
+        margin-left: 0.6em;
+        font-size: 1.4vw;
+        font-weight: 700;
+        opacity: 1;
+        transition: color 0.3s ease;
+    }
+
+    .change .arrow {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 0.5em solid transparent;
+        border-right: 0.5em solid transparent;
+    }
+
+    .change .arrow.up {
+        border-bottom: 0.7em solid #00ff88;
+    }
+
+    .change .arrow.down {
+        border-top: 0.7em solid #ff4d4d;
+    }
+
+    .change.green {
+        color: #00ff88;
+    }
+
+    .change.red {
+        color: #ff4d4d;
+    }
+
     .updated {
         margin-top: 1vh;
         font-size: 1vw;
@@ -103,6 +138,10 @@
             font-size: 5vw;
         }
 
+        .change {
+            font-size: 3.5vw;
+        }
+
         .updated {
             font-size: 3vw;
         }
@@ -113,7 +152,7 @@
 
 <div class="container">
     <div class="price" id="price">--</div>
-    <div class="symbol">BTC / USD</div>
+    <div class="symbol">BTC / USD <span class="change" id="change"><span class="arrow" id="arrow"></span><span id="changePercent"></span></span></div>
     <div class="updated" id="updated">connecting...</div>
 </div>
 
@@ -131,8 +170,25 @@
 
             const priceEl = document.getElementById('price');
             const updatedEl = document.getElementById('updated');
+            const changeEl = document.getElementById('change');
+            const arrowEl = document.getElementById('arrow');
+            const changePercentEl = document.getElementById('changePercent');
 
             priceEl.textContent = formatted;
+
+            if (data.priceChangePercent !== null && data.priceChangePercent !== undefined) {
+                const pct = parseFloat(data.priceChangePercent);
+                const prefix = pct > 0 ? '+' : '';
+                changePercentEl.textContent = prefix + pct.toFixed(2) + '%';
+
+                if (pct >= 0) {
+                    changeEl.className = 'change green';
+                    arrowEl.className = 'arrow up';
+                } else {
+                    changeEl.className = 'change red';
+                    arrowEl.className = 'arrow down';
+                }
+            }
 
             if (previousPrice !== null) {
                 if (price > previousPrice) {
