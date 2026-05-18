@@ -3,7 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BTC Price Wall</title>
+<title>BTC Price Wall — Live Bitcoin Price in USD</title>
+<meta name="description" content="Live Bitcoin (BTC) price in USD, updated every 3 seconds. Real-time BTC/USD ticker wall display.">
+<meta name="keywords" content="Bitcoin price, BTC, live Bitcoin price, BTC USD, Bitcoin ticker, crypto price">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://<?= $_SERVER['HTTP_HOST'] ?>">
+
+<meta property="og:title" content="BTC Price Wall — Live Bitcoin Price in USD">
+<meta property="og:description" content="Live Bitcoin (BTC) price in USD, updated every 3 seconds.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://<?= $_SERVER['HTTP_HOST'] ?>">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BTC Price Wall — Live Bitcoin Price in USD">
+<meta name="twitter:description" content="Live Bitcoin (BTC) price in USD, updated every 3 seconds.">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "BTC Price Wall",
+    "description": "Live Bitcoin price in USD, updated every 3 seconds.",
+    "url": "https://<?= $_SERVER['HTTP_HOST'] ?>",
+    "potentialAction": {
+        "@type": "WatchAction",
+        "target": "https://<?= $_SERVER['HTTP_HOST'] ?>"
+    }
+}
+</script>
 
 <style>
     * {
