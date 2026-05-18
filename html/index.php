@@ -208,7 +208,7 @@
             previousPrice = price;
 
             updatedEl.textContent =
-                'Updated ' + new Date().toLocaleTimeString();
+                'Updated ' + new Date().toLocaleTimeString('en-US', { hour12: false, timeZoneName: 'short' });
 
         } catch (err) {
             console.error(err);
