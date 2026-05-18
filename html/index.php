@@ -72,7 +72,7 @@
         font-size: 18vw;
         font-weight: 900;
         line-height: 0.9;
-        letter-spacing: -0.05em;
+        letter-spacing: 0.03em;
         transition: color 0.3s ease, transform 0.2s ease;
         user-select: none;
     }
