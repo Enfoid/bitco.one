@@ -1,2 +1,3 @@
 # bitco.one
-basic static website displaying crypto rates
+
+./html is hosted under https://bitco.one
