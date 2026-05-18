@@ -34,6 +34,13 @@
 </script>
 
 <style>
+    @font-face {
+        font-family: 'Audiowide';
+        src: url('Audiowide-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     * {
         margin: 0;
         padding: 0;
@@ -46,7 +53,7 @@
         overflow: hidden;
         background: #000;
         color: #fff;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-family: 'Audiowide', sans-serif;
     }
 
     body {
