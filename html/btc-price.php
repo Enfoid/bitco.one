@@ -25,8 +25,12 @@ function fetch_with_cache($url, $cacheFile, $ttl) {
     return $data;
 }
 
-$priceCache = __DIR__ . '/c/btc-cache.json';
-$avgCache   = __DIR__ . '/c/btc-avg-cache.json';
+$cacheDir = __DIR__ . '/c';
+if (!is_dir($cacheDir)) {
+    mkdir($cacheDir, 0755, true);
+}
+$priceCache = $cacheDir . '/btc-cache.json';
+$avgCache   = $cacheDir . '/btc-avg-cache.json';
 
 $priceData = fetch_with_cache(
     'https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT',
