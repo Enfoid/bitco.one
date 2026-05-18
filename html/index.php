@@ -7,6 +7,7 @@
 <meta name="description" content="Live Bitcoin (BTC) price in USD, updated every 3 seconds. Real-time BTC/USD ticker wall display.">
 <meta name="keywords" content="Bitcoin price, BTC, live Bitcoin price, BTC USD, Bitcoin ticker, crypto price">
 <meta name="robots" content="index, follow">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="canonical" href="https://<?= $_SERVER['HTTP_HOST'] ?>">
 
 <meta property="og:title" content="BTC Price Wall — Live Bitcoin Price in USD">
