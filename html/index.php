@@ -155,7 +155,7 @@
     }
 </style>
 </head>
-<body>
+<?php include('ga.inc.php'); ?><body>
 
 <div class="container">
     <div class="price" id="price">--</div>
