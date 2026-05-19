@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BTC Price Wall — Live Bitcoin Price in USD</title>
+<title>BTC Wall — Live Bitcoin Price in USD</title>
 <meta name="description" content="Live Bitcoin (BTC) price in USD, updated every 3 seconds. Real-time BTC/USD ticker wall display.">
 <meta name="keywords" content="Bitcoin price, BTC, live Bitcoin price, BTC USD, Bitcoin ticker, crypto price">
 <meta name="robots" content="index, follow">
