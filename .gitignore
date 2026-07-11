@@ -1,2 +1,5 @@
 CertSage
 .certsage.php
+html/error_log
+html/c/btc-cache.json
+html/c/btc-avg-cache.json
