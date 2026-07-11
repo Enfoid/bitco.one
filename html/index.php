@@ -1,4 +1,31 @@
-<!DOCTYPE html>
+<?php
+// old IB redirects
+$ib = [
+'sf-discord' => 'https://www.swingfish.trade/293419',
+'scau' => 'https://www.enfoid.com/blog/scau',
+'sf-disabled' => 'https://www.swingfish.trade/293419',
+'uptime' => 'https://stats.uptimerobot.com/D0LKrsBZQ8',
+'ib/t4t' => 'https://t4tcapitalfm.com/how-funding-works/practical-as',
+'ib/duplikum' => 'https://www.trade-copier.com/index.php',
+'ib/ftmo' => 'https://ftmo.com/en/#evaluation-process',
+'icmarkets' => '/ib/icmarkets',
+'deel' => '/ib/deel',
+'ib/mff' => '/ib/myforexfunds',
+'ib/myforexfunds' => 'https://myforexfunds.com/programs/?wpam_id=199442',
+'swingfish/morbo-gets-a-new-home' => 'https://www.swingfish.trade/blog/swingfish-updates/2022',
+'ib/deriv' => 'https://deriv.com/signup/?t=z8hKBMgITLddm3h149eahWNd7Zg',
+'ib/deel' => 'https://letsdeel.com/referrals/Mario-3JWMVmzR',
+'ib/icmarkets' => 'https://icmarkets.com/?camp=11754',
+'youtube' => 'https://www.youtube.com/c/SwingFish/live',
+'deriv' => 'https://www.swingfish.trade/ib/deriv',
+'enfoid' => 'https://www.enfoid.com'
+];
+
+$r = substr($_SERVER['REQUEST_URI'],1);
+if (isset($ib[$r])) {
+	header("Location: ".$ib[$r]);
+}
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
